@@ -1,37 +1,38 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Permalinks
+permalink: pretty
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Base Site Settings
 title: West Eleventh Media
-email: joeyquarters@gmail.com
+email: westeleventhmedia@gmail.com
+lang: en-us
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+  A budding new media company based in Washington, D.C.
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
+# URLs
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.westeleventh.media" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Collections
+collections:
+  newpodwhodis:
+    output: true
+    permalink: /newpodwhodis/:path/
+    title: New Pod, Who Dis?
+    email: newpodwhodis@gmail.com
+    subtitle: Jackie, Joey, Jake, and Steven embark on a journey to discover the meaning of life
+    summary: >-
+      New Pod, Who Dis? is a weekly journey through the trials and tribulations of young adulthood. Your hosts Jackie,
+      Joey, Jake, and Steven will engage in a spirited discussion of life's past, present, and future issues.
+    image: /img/npwd_logo_feed.png
+
 # Build settings
+timezone: America/New_York
 markdown: kramdown
 plugins:
   - jekyll-feed
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -41,3 +42,4 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README.MD
+  - _audio/

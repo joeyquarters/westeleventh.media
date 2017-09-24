@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>{% assign collection_name = page.collection %}{% assign collection = (site.collections | where:"label", collection_name | first %}{% assign episodes = (site[collection_name] | where:"layout", "episode" | sort: 'date') %}
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>{{ collection.title }}</title>
+    <atom:link href="{{ site.url }}/{{ collection_name }}/feed" rel="self" type="application/rss+xml" />
+    <link>{{  site.url }}</link>
+    <language>{{ site.lang }}</language>
+    <copyright>All rights reserved.</copyright>
+    <itunes:subtitle>{{ collection.subtitle }}</itunes:subtitle>
+    <itunes:author>{{ site.title }}</itunes:author>
+    <itunes:summary>{{ collection.summary }}</itunes:summary>
+    <description>{{ collection.summary }}</description>
+    <itunes:owner>
+      <itunes:name>{{ site.title }}</itunes:name>
+      <itunes:email>{{ site.email }}</itunes:email>
+    </itunes:owner>
+    <itunes:image href="{{ site.url }}{{ collection.image }}" />
+    <itunes:category text="Comedy" />
+    <itunes:explicit>yes</itunes:explicit>
+    {% for episode in episodes %}
+    <item>
+      <title>{{ episode.title | xml_escape }}</title>
+      <itunes:author>{{ site.title }}</itunes:author>
+      <itunes:summary>{{ '<![CDATA[' }}{{ episode.summary }}{{ ']]>' }}</itunes:summary>
+      <itunes:duration>{{ episode.duration }}</itunes:duration>
+      <itunes:keywords>{{ episode.tags | join:', ' }}</itunes:keywords>
+      <enclosure length="{{ episode.length }}" type="audio/mpeg" url="{{ episode.aac_asset_link | xml_escape  }}"/>
+      <guid>{{ episode.aac_asset_link | xml_escape }}</guid>
+      <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
