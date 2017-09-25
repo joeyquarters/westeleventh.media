@@ -40,6 +40,8 @@ google_analytics: UA-106875647-1
 # Build settings
 timezone: America/New_York
 markdown: kramdown
+sass:
+  style: compressed
 plugins:
   - jekyll-feed
 
