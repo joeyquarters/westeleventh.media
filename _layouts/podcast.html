@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% assign collection_name = page.collection %}
+{% assign podcast = site.collections | where:"label", collection_name %}
+{% assign episodes = site[collection_name] | where:"layout", "episode" | sort: 'date' %}
+
+<div class="podcast">
+
+  <h1 class="page-heading">{{ collection.title }}</h1>
+
+  <ul class="post-list">
+    {% for episode in episodes %}
+      <li>
+        {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">{{ episode.date | date: date_format }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ episode.url | relative_url }}">{{ episode.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+</div>
