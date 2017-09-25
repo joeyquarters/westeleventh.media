@@ -10,6 +10,13 @@ description: >- # this means to ignore newlines until "baseurl:"
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
+# Main Navigation
+main_navigation:
+  - text: About
+    url: /about/
+  - text: New Pod, Who Dis?
+    url: /newpodwhodis
+
 # URLs
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.westeleventh.media" # the base hostname & protocol for your site, e.g. http://example.com
