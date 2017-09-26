@@ -3,7 +3,7 @@
   <channel>
     <title>{{ collection.title }}</title>
     <atom:link href="{{ site.url }}/feed-{{ collection_name }}.xml" rel="self" type="application/rss+xml" />
-    <link>{{  site.url }}</link>
+    <link>{{  site.url }}/{{ collection_name }}</link>
     <language>{{ site.lang }}</language>
     <copyright>All rights reserved.</copyright>
     <itunes:subtitle>{{ collection.subtitle }}</itunes:subtitle>
