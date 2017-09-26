@@ -32,7 +32,7 @@ collections:
     summary: >-
       New Pod, Who Dis? is a weekly journey through the trials and tribulations of young adulthood. Your hosts Jackie,
       Joey, Jake, and Steven will engage in a spirited discussion of life's past, present, and future issues.
-    image: /img/npwd_logo_feed.png
+    image: /img/npwd_feed_logo.png
 
 # Analytics
 google_analytics: UA-106875647-1
