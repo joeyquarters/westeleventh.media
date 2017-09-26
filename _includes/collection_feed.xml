@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>{% assign collection_name = page.collection %}{% assign collection = (site.collections | where:"label", collection_name | first %}{% assign episodes = (site[collection_name] | where:"layout", "episode" | sort: 'date') %}
+<?xml version="1.0" encoding="utf-8"?>{% assign collection_name = page.collection_name %}{% assign collection = (site.collections | where:"label", collection_name | first %}{% assign episodes = (site[collection_name] | where:"layout", "episode" | sort: 'date') %}
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
     <title>{{ collection.title }}</title>
