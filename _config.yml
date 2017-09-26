@@ -45,6 +45,7 @@ sass:
 plugins:
   - jekyll-feed
 
+# Exclude
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -53,5 +54,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - README.MD
+  - README.md
+  - LICENSE.txt
   - _audio/
