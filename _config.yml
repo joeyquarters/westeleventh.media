@@ -57,3 +57,4 @@ exclude:
   - README.md
   - LICENSE.txt
   - _audio/
+  - gulp/
