@@ -21,9 +21,12 @@
     <item>
       <title>{{ episode.title | xml_escape }}</title>
       <itunes:author>{{ site.title }}</itunes:author>
-      <itunes:summary>{{ '<![CDATA[' }}{{ episode.summary }}{{ ']]>' }}</itunes:summary>
+      <itunes:summary>{{ episode.summary | xml_escape }}</itunes:summary>
       <itunes:duration>{{ episode.duration }}</itunes:duration>
       <itunes:keywords>{{ episode.tags | join:', ' }}</itunes:keywords>
+      {% if episode.show_notes %}
+      <content:encoded>{{ '<![CDATA[' }}{{ episode.show_notes }}{{ ']]>' }}</content:encoded>
+      {% endif %}
       <enclosure length="{{ episode.length }}" type="audio/mpeg" url="{{ episode.aac_asset_link | replace: "http://", "http://dts.podtrac.com/redirect.m4a/" | xml_escape  }}"/>
       <guid>{{ episode.aac_asset_link | xml_escape }}</guid>
       <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
