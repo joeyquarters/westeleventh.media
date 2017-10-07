@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>{% assign collection_name = page.collection_name %}{% assign collection = (site.collections | where:"label", collection_name | first %}{% assign episodes = (site[collection_name] | where:"layout", "episode" | sort: 'date') %}
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>{{ collection.title }}</title>
     <atom:link href="{{ site.url }}/feed-{{ collection_name }}.xml" rel="self" type="application/rss+xml" />
