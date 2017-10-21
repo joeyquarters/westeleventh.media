@@ -28,5 +28,3 @@ show_notes: |
 
   <p>New Pod, Who Dis? is produced by West Eleventh Media from Washington, D.C.</p>
 ---
-
-Episode 2: Notifications, pogs , and Tinder pick up lines

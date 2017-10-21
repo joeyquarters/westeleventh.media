@@ -11,5 +11,3 @@ segments: "Sup, Google What?, Lies Our Parents Told Us"
 tags: []
 explicit: yes
 ---
-
-Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

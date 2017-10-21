@@ -11,5 +11,3 @@ segments: "Sup, Google What?, After School Special"
 tags: [unroll.me, hallmark, pogs, 90s, social, coffee, newpodwhodis, pokemon, tinder]
 explicit: yes
 ---
-
-Episode 2: Notifications, pogs , and Tinder pick up lines
