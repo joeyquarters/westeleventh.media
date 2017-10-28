@@ -1,29 +1,29 @@
 'use strict';
 
-const { readdirSync } = require('fs');
+const { readdirSync, existsSync } = require('fs');
 const path = require('path');
 const ffmpeg = require('gulp-fluent-ffmpeg');
 const runSequence = require('run-sequence');
 
 /**
- * Grab an array of audio files that have not been converted
- * @return Array
+ * Get a list of files in the _audio/ folder that need to be converted
+ * @param String extname Which extension to check if converted
+ * @return Array  An array of filenames w/ extension
  */
-const audioToConvert = () => {
-  const toConvert = readdirSync('_audio/')
+const getFilesToConvert = (extname = 'm4a') => {
+  const files = readdirSync('_audio/')
     .filter((file) => path.extname(file) == '.aac');
 
-  const converted = readdirSync('_audio/final')
-    .filter((file) => ['.m4a', '.ogg'].indexOf(path.extname(file)) !== -1);
-  
-  const convertedNames = converted.map((file) => {
-    return path.parse(file).name;
-  });
-
-  return toConvert.filter((file) => {
+  const toConvert = files.filter((file) => {
     const fileName = path.parse(file).name;
-    return convertedNames.indexOf(fileName) === -1;
-  });
+    const oggExists = existsSync(`_audio/final/${fileName}.${extname}`);
+
+    if (!oggExists) {
+      return true;
+    }
+  }).map((file) => `_audio/${file}`);
+
+  return toConvert;
 };
 
 module.exports = (gulp) => {
@@ -31,21 +31,20 @@ module.exports = (gulp) => {
   /**
    * Convert audio files to .m4a, move to final folder
    */
-  gulp.task('audio:convert-m4a', () => {
-    const filesArray = audioToConvert();
-    gulp.src(filesArray)
-      .pipe(ffmpeg('m4a'))
-      .pipe(gulp.dest('_audio/final'));
+  gulp.task('audio:convert-aac', () => {
+    const toConvert = getFilesToConvert('m4a');
+    // @TODO
   });
 
   /**
    * Convert audio files to .ogg, move to final folder
    */
   gulp.task('audio:convert-ogg', () => {
-    const filesArray = audioToConvert();
-    gulp.src(filesArray)
+    const toConvert = getFilesToConvert('ogg');
+    return gulp.src(toConvert)
       .pipe(ffmpeg('ogg', (cmd) => {
         return cmd
+          .audioChannels(2)
           .audioCodec('libvorbis');
       }))
       .pipe(gulp.dest('_audio/final'));
@@ -54,7 +53,7 @@ module.exports = (gulp) => {
   /**
    * Main audio conversion task
    */
-  gulp.task('audio:convert', () => {
+  gulp.task('audio', () => {
     return runSequence(
       'audio:convert-m4a',
       'audio:convert-ogg'
