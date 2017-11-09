@@ -2,8 +2,8 @@
 layout: episode
 number: "7"
 title: "Episode 7: Now 69, Banger Edition"
-duration: 46:53
-length: 45479397
+duration: "46:53"
+length: "45479397"
 summary: "This week the gang reminisces about their walkmans skipping, discovers that NOW That’s What I Call Music is still a thing, and the struggle of getting air into car tires."
 aac_asset_link: "http://episodes.westeleventh.media/NewPodWhoDis007.m4a"
 ogg_asset_link: "http://episodes.westeleventh.media/NewPodWhoDis007.ogg"
