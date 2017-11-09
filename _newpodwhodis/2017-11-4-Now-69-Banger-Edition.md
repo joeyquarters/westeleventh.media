@@ -22,6 +22,6 @@ show_notes: |
   </ul>
   </p>
   <p>Rate and Subscribe on <a href="https://itunes.apple.com/us/podcast/id1289536070">iTunes</a>.</p>
-  <p>Follow us on <a href="https://www.instagram.com/newpodwhodis/">Instagram</a>, <a href="https://twitter.com/newpod_whodis>Twitter</a>, or send us some digital mail at <a href="mailto:newpodwhodis@gmail.com">newpodwhodis@gmail.com</a>.</p>
-  <p>New Pod, Who Dis? is produced by West Eleventh Media from Washington, D.C.</p>
+  <p>Follow us on <a href="https://www.instagram.com/newpodwhodis/">Instagram</a>, <a href="https://www.youtube.com/channel/UCk_pIgOoAhNGrrTitkGEMqw">YouTube</a>, <a href="https://twitter.com/newpod_whodis">Twitter</a>, and <a href="https://www.facebook.com/newpodwhodis">Facebook</a>.Email us some digital mail at <a href="mailto:newpodwhodis@gmail.com">newpodwhodis@gmail.com</a>.</p>
+  <p>New Pod, Who Dis? is produced by <a href="http://www.westeleventh.media/">West Eleventh Media</a> from Washington, D.C.</p>
 ---

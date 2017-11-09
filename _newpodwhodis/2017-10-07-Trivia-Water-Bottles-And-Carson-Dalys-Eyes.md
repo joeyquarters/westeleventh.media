@@ -13,18 +13,15 @@ explicit: yes
 show_notes: |
   <p><b>Links from the interwebs:</b>
   <ul>
-    <li><a href=”https://www.wired.com/story/mtv-revives-trl-for-smartphone-generation?mbid=synd_digg”>TRL is coming back!</a></li>
-  <li><a href=”http://knowyourmeme.com/memes/dancing-hot-dog-snapchat-filter”>Snapchat hot dog meme</a></li>
-  <li><a href=”https://art.snapchat.com/”>Snapchat’s Digital AR Art Project</a></li>
-  <li><a href=”http://mashable.com/2017/10/03/instagram-polling-stickers/#.G3Nz1_vgqqM”>Instagram’s new poll feature</a></li>
-  <li><a href=”http://www.humangear.com/gear/capcap”>The Nalgene top you need!</a></li>
-    <li><a href=”https://www.youtube.com/watch?v=apCIhoPmHW8&t=7s”>Joey’s gross (interesting?) foot exercise videos</a></li>
+    <li><a href="https://www.wired.com/story/mtv-revives-trl-for-smartphone-generation?mbid=synd_digg">TRL is coming back!</a></li>
+  <li><a href="http://knowyourmeme.com/memes/dancing-hot-dog-snapchat-filter">Snapchat hot dog meme</a></li>
+  <li><a href="https://art.snapchat.com/">Snapchat’s Digital AR Art Project</a></li>
+  <li><a href="http://mashable.com/2017/10/03/instagram-polling-stickers/#.G3Nz1_vgqqM">Instagram’s new poll feature</a></li>
+  <li><a href="http://www.humangear.com/gear/capcap">The Nalgene top you need!</a></li>
+    <li><a href="https://www.youtube.com/watch?v=apCIhoPmHW8&t=7s">Joey’s gross (interesting?) foot exercise videos</a></li>
   </ul>
-    </p>
-
-  <p>Rate and Subscribe on <a href=”https://itunes.apple.com/us/podcast/id1289536070”>iTunes</a>.</p>
-
-  <p>Follow us on <a href=”https://www.instagram.com/newpodwhodis/”>Instagram</a>, <a href=”https://twitter.com/newpod_whodis>Twitter</a>, or send us some digital mail at <a href="mailto:newpodwhodis@gmail.com">newpodwhodis@gmail.com</a>.</p>
-
-  <p>New Pod, Who Dis? is produced by West Eleventh Media from Washington, D.C.</p>
+  </p>
+  <p>Rate and Subscribe on <a href="https://itunes.apple.com/us/podcast/id1289536070">iTunes</a>.</p>
+  <p>Follow us on <a href="https://www.instagram.com/newpodwhodis/">Instagram</a>, <a href="https://www.youtube.com/channel/UCk_pIgOoAhNGrrTitkGEMqw">YouTube</a>, <a href="https://twitter.com/newpod_whodis">Twitter</a>, and <a href="https://www.facebook.com/newpodwhodis">Facebook</a>.Email us some digital mail at <a href="mailto:newpodwhodis@gmail.com">newpodwhodis@gmail.com</a>.</p>
+  <p>New Pod, Who Dis? is produced by <a href="http://www.westeleventh.media/">West Eleventh Media</a> from Washington, D.C.</p>
 ---
