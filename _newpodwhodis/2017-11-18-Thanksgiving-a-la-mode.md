@@ -1,7 +1,7 @@
 ---
 layout: episode
 number: "9"
-title: "Episode 9: Now That’s What I Call Meta"
+title: "Episode 9: Thanksgiving, à la Mode"
 duration: "49:41"
 length: "48451111"
 summary: "The gang sits down to dissect Thanksgiving traditions, flushing the toilet on an airplane, and what exactly is 'meta'"
