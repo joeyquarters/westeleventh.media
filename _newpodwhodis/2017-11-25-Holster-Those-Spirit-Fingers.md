@@ -17,6 +17,7 @@ show_notes: |
     <li><a href="http://www.theus50.com/fastfacts/licenses-state.php">Refresh your U.S. license plate design knowledge.</a></li>
     <li><a href="https://www.thrillist.com/cars/all-50-united-states-license-plates-ranked">And of course Thrillist ranked all 50 of them.</a></li>
     <li><a href="https://en.wikipedia.org/wiki/Millennials">The only Wikipedia page that truly matters...at least from the Millennial perspective.</a></li>
+    <li><a href="http://www.thedelaware3000.org/">Those coveted Delaware license plates</a></li>
   </ul>
   </p>
   <p>Rate and Subscribe on <a href="https://itunes.apple.com/us/podcast/id1289536070">iTunes</a>.</p>
