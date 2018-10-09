@@ -8,6 +8,6 @@
     "gulp-fluent-ffmpeg": "^1.0.2",
     "gulp-util": "^3.0.8",
     "load-gulp-tasks": "^0.1.0",
-    "run-sequence": "^2.2.0"
+    "run-sequence": "^2.2.1"
   }
 }
