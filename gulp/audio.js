@@ -3,7 +3,6 @@
 const { readdirSync, existsSync } = require('fs');
 const path = require('path');
 const ffmpeg = require('gulp-fluent-ffmpeg');
-const runSequence = require('run-sequence');
 
 /**
  * Get a list of files in the _audio/ folder that need to be converted
@@ -16,9 +15,9 @@ const getFilesToConvert = (extname = 'm4a') => {
 
   const toConvert = files.filter((file) => {
     const fileName = path.parse(file).name;
-    const oggExists = existsSync(`_audio/final/${fileName}.${extname}`);
+    const fileExists = existsSync(`_audio/final/${fileName}.${extname}`);
 
-    if (!oggExists) {
+    if (!fileExists) {
       return true;
     }
   }).map((file) => `_audio/${file}`);
@@ -27,36 +26,27 @@ const getFilesToConvert = (extname = 'm4a') => {
 };
 
 module.exports = (gulp) => {
-
-  /**
-   * Convert audio files to .m4a, move to final folder
-   */
-  gulp.task('audio:convert-aac', () => {
-    const toConvert = getFilesToConvert('m4a');
-    // @TODO
-  });
-
   /**
    * Convert audio files to .ogg, move to final folder
    */
-  gulp.task('audio:convert-ogg', () => {
+  function convertOgg() {
     const toConvert = getFilesToConvert('ogg');
-    return gulp.src(toConvert)
+
+    if (toConvert.length === 0) {
+      return Promise.resolve();
+    }
+
+    return gulp.src(['_audio/final/'])
       .pipe(ffmpeg('ogg', (cmd) => {
         return cmd
           .audioChannels(2)
           .audioCodec('libvorbis');
       }))
       .pipe(gulp.dest('_audio/final'));
-  });
+  };
 
   /**
    * Main audio conversion task
    */
-  gulp.task('audio', () => {
-    return runSequence(
-      'audio:convert-m4a',
-      'audio:convert-ogg'
-    );
-  });
+  gulp.task('audio', convertOgg);
 };

@@ -4,10 +4,9 @@
   "private": true,
   "main": "gulpfile.js",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-fluent-ffmpeg": "^1.0.2",
     "gulp-util": "^3.0.8",
-    "load-gulp-tasks": "^0.1.0",
-    "run-sequence": "^2.2.1"
+    "load-gulp-tasks": "^0.1.0"
   }
 }
