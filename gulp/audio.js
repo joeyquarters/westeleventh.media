@@ -1,6 +1,7 @@
 'use strict';
 
 const { readdirSync, existsSync } = require('fs');
+const { dest, src } = require('gulp');
 const path = require('path');
 const ffmpeg = require('gulp-fluent-ffmpeg');
 
@@ -9,7 +10,7 @@ const ffmpeg = require('gulp-fluent-ffmpeg');
  * @param String extname Which extension to check if converted
  * @return Array  An array of filenames w/ extension
  */
-const getFilesToConvert = (extname = 'm4a') => {
+function getFilesToConvert (extname = 'm4a') {
   const files = readdirSync('_audio/')
     .filter((file) => path.extname(file) == '.aac');
 
@@ -25,28 +26,23 @@ const getFilesToConvert = (extname = 'm4a') => {
   return toConvert;
 };
 
-module.exports = (gulp) => {
-  /**
-   * Convert audio files to .ogg, move to final folder
-   */
-  function convertOgg() {
-    const toConvert = getFilesToConvert('ogg');
+/**
+ * Convert audio files to .ogg, move to final folder
+ */
+function audio() {
+  const toConvert = getFilesToConvert('ogg');
 
-    if (toConvert.length === 0) {
-      return Promise.resolve();
-    }
+  if (toConvert.length === 0) {
+    return Promise.resolve();
+  }
 
-    return gulp.src(['_audio/final/'])
-      .pipe(ffmpeg('ogg', (cmd) => {
-        return cmd
-          .audioChannels(2)
-          .audioCodec('libvorbis');
-      }))
-      .pipe(gulp.dest('_audio/final'));
-  };
-
-  /**
-   * Main audio conversion task
-   */
-  gulp.task('audio', convertOgg);
+  return src(['_audio/final/'])
+    .pipe(ffmpeg('ogg', (cmd) => {
+      return cmd
+        .audioChannels(2)
+        .audioCodec('libvorbis');
+    }))
+    .pipe(dest('_audio/final'));
 };
+
+module.exports = { audio };

@@ -1,11 +1,10 @@
-const gulp = require('gulp');
-const loadGulpTasks = require('load-gulp-tasks');
+const { series } = require('gulp');
 
-const options = {
-  pattern: 'gulp/**/*.js'
-};
+const tasks = require('./gulp');
 
-/**
- * Initialize our Gulp tasks
- */
-loadGulpTasks(gulp, options);
+exports.audio = tasks.audio;
+exports.build = tasks.build;
+exports.setup = tasks.setup;
+exports.deploy = series(tasks.deploySite, tasks.deployAudio);
+
+exports.default = build;
